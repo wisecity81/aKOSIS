@@ -13,3 +13,5 @@ Depends:
     httr,
     jsonlite,
     aStarter
+URL: https://github.com/wisecity81/aKOSIS
+BugReports: https://github.com/wisecity81/aKOSIS/issues
