@@ -15,3 +15,4 @@ Depends:
     aStarter
 URL: https://github.com/wisecity81/aKOSIS
 BugReports: https://github.com/wisecity81/aKOSIS/issues
+LazyData: true
