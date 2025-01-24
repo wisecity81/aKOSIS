@@ -1,0 +1,15 @@
+Package: aKOSIS
+Title: Use KOSIS API to read statistic table
+Version: 0.0.1
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Use KOSIS API to read statistic table
+License: Not set
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    httr,
+    jsonlite,
+    aStarter
