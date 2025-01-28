@@ -65,3 +65,15 @@ monthly_to_daily_simple <- function(posix_dates, values) {
 
   return(result)
 }
+#' change2index
+#'
+#' 변동률을 지수로 변환
+#'
+#' @param x 변동률 벡터
+#' @param .percent 변동률이 백분율인지 여부
+#' @return 지수 벡터
+#' @export
+change2index = function(x, .percent = T) {
+  y = c(100, cumprod(1 + x[2:length(x)]/ifelse(.percent,100,1)) * 100)
+  return(y)
+}
