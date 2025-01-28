@@ -6,6 +6,12 @@
 \usage{
 readKOSIS(url)
 }
+\arguments{
+\item{url}{URL of KOSIS statistic table}
+}
+\value{
+Data frame of KOSIS statistic table
+}
 \description{
 Read KOSIS statistic table into data frame using URL
 }

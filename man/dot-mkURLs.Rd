@@ -6,6 +6,9 @@
 \usage{
 .mkURLs()
 }
+\value{
+URL list
+}
 \description{
 Make URL list
 }
