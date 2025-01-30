@@ -104,7 +104,7 @@ change2index = function(x, .percent = T) {
 .plot_duo = function(dat=irr, X = "CD", Y = "value", Z = "대안", W = "임대기간"
                      , alt = c("비교"="비교", "현재"="현재")
                      , .w = c("10년", "10년")
-                     , xlbl = "CD금리(%)", ylbl="value"
+                     , xlbl = "CD금리(%)", ylbl="value", ylbl_add = ""
                      , xcri = c("3.5"=3.5)
                      , ycri=c(0)
                      , a_ratio = 3/4
@@ -114,6 +114,7 @@ change2index = function(x, .percent = T) {
                      , .digits = 3
                      , .ylim = -9
                      , .yAxis = 0
+                     , .bgCol = "grey95"
 ) {
 
   if (length(alt) == length(.w)) {
@@ -199,7 +200,7 @@ change2index = function(x, .percent = T) {
     a = ggplot(data = db, aes(x = x, y = y, linewidth = 비교)) +
       scale_linewidth_manual(values = 0.1 + 1:length(alt) * 0.2)+
       geom_line() +
-      ylab(ylbl) +
+      ylab(paste0(ylbl, ylbl_add)) +
       xlab(xlbl) +
       scale_x_continuous(breaks = xtic, labels = names(xtic)) +
       scale_y_continuous(labels = names(ytic), breaks = ytic, limits = c(min(c(db$y, .ylim, .yAxis)), max(c(db$y, .ylim, .yAxis)))) +
@@ -212,11 +213,12 @@ change2index = function(x, .percent = T) {
             , aspect.ratio = a_ratio
             , legend.position = c(0, 0)
             , legend.justification = c(0, 0)
-            , legend.background = element_blank()
+            , legend.background = element_rect(fill = .bgCol)
             #, legend.direction = "horizontal"
             , panel.grid = element_blank()
             , legend.key.height = unit(0.8, "lines")
             , legend.byrow = T
+            , panel.background = element_rect(fill = .bgCol)
             # x축 텍스트 줄간격(lineheight) 조절
             , axis.text.x = element_text(lineheight = 0.5)
       )

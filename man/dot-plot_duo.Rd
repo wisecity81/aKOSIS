@@ -14,6 +14,7 @@
   .w = c("10년", "10년"),
   xlbl = "CD금리(\%)",
   ylbl = "value",
+  ylbl_add = "",
   xcri = c(`3.5` = 3.5),
   ycri = c(0),
   a_ratio = 3/4,
@@ -22,7 +23,8 @@
   .percent = T,
   .digits = 3,
   .ylim = -9,
-  .yAxis = 0
+  .yAxis = 0,
+  .bgCol = "grey95"
 )
 }
 \arguments{
